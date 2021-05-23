@@ -6,7 +6,8 @@ This repository is a Decision Tree Classifier Implementation done with <a href="
 
 1. Clone this repo using `git clone https://github.com/kanuarj/Titanic.git` command.
 2. Install necessary requirements using `pip install flask pandas scikit-learn` command.
-3. Run the project using `py app.py` and navigate to `localhost:5000` in your browser.
+3. Change the directory using ```cd TitanicMLandFlaskDeployment``` command.
+4. Run the project using `py app.py` and navigate to `localhost:5000` in your browser.
 
 > The `py app.py` specifically works for Windows. Use `python app.py` for other systems.
 
