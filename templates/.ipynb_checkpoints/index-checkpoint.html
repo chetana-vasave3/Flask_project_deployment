@@ -20,10 +20,16 @@
     
 
     <div class="container p-3 my-3 bg-secondary text-white">
-      {% if result %}
-      <p>{{ result }}</p>
-  {% endif %}
-  <form method="post" action="/predict">
+      {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, i in messages %}
+                    <div class="alert alert-{{category}}">
+                        {{i}}
+                    </div>
+                {% endfor %}
+            {% endif %}
+      {% endwith %}
+    <form class="form-group" action="/" method="POST">
       <label for="passclass">Passenger Class :</label>
       <input list="Passenger" name="passs" id="passclass" class="form-control">
         <datalist id="Passenger" class="dropdown-menu">
@@ -31,23 +37,10 @@
             <option value="2" class="dropdown-item">
             <option value="3" class="dropdown-item">
         </datalist><br>
-        <label for="sibsip">No of Siblings/spouse:</label>
-        <input class="form-control" type="number" name="sibsip"><br>
-        <label for="parch">Number of parents or children :</label>
-        <input class="form-control" type="number" name="parch"><br>
-        <label for="fare">Ticket Price:</label>
-        <input class="form-control" type="number" name="fare" step="any"><br>
-        <label for="Embarked">Embarked:</label>
-        <select name="Embarked" id="Embarked" class="form-control">
-          <option value="C">Cherbourg(C)</option>
-          <option value="Q">Queenstown(Q)</option>
-          <option value="S">Southampton(S)</option>
-        </select><br>
+        
       <label for="age">Age :</label>
-      <input class="form-control" type="number" name="age" step="any"><br>
-      <label >Gender :  </label><br>
+      <input class="form-control" type="number" name="age"><br>
       <input type="radio" id="male" name="gender" value="1">
-      
       <label for="1">Male</label><br>
         <input type="radio" id="female" name="gender" value="0">
         <label for="0">Female</label>
