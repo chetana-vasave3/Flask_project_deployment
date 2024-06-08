@@ -14,7 +14,7 @@ This repository is a Decision Tree Classifier Implementation done with <a href="
 ## Understanding the Files in this Repo
 
 `model_notebook.ipynb` is the Implementation of Decision Tree Classification Model.<br>
-`titanic_model.py` is the Implementation of joblib model.<br>
+`titanic_model.py` is the Implementation of flask model.<br>
 `app.py` is the Flask Implementation of the Model.<br>
 `templates/index.html` contains the front end for the Web Application.
 
